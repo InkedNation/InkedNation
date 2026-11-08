@@ -446,16 +446,16 @@ button, input{
     padding:5px 12px;
 }
 .hugas{
-    --height:20vh;
+    --height:30vh;
 }
 .pinggan{
-    --height:45vh;
+    --height:55vh;
 }
 .tinidor{
-    --height:75vh;
+    --height:85vh;
 }
 .plato{
-    --height:55vh;
+    --height:65vh;
 }
 .sourceContainer .divOverflow {
     flex-direction: column;
