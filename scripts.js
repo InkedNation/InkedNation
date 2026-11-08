@@ -27,9 +27,9 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-document.querySelectorAll(".div, .text, .hr, .cursor").forEach((element) => {
-    observer.observe(element);
-});
+    document.querySelectorAll(".div, .text, .hr, .cursor").forEach((element) => {
+        observer.observe(element);
+    });
 //this shows the date for the header bar thingy
 const date = new Date();
 const display = document.getElementById("date");
@@ -71,6 +71,10 @@ KolumPage.addEventListener("click", () =>{
 const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
     window.location.href = "../../Advocacy.html";
+});
+const AboutPage = document.getElementById("AboutPage");
+AboutPage.addEventListener("click", () =>{
+    window.location.href = "../../About.html";
 });
 const filipinoMain = document.getElementById("mainArticleFil");
 if (filipinoMain){

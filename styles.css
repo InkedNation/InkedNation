@@ -1,7 +1,7 @@
 body{
-    background:#FAF5EB;
     margin:0px;
     overflow-x: hidden;
+    background:linear-gradient(-45deg, #c49182 0%, #FAF5EB 50%, #FAF5EB 100%);
 }
 button, input{
     cursor:pointer;
@@ -127,7 +127,7 @@ button, input{
 }
 .navT{
     padding:0px;
-    --width:72vw;
+    --width:80vw;
     --height:5vh;
     --time: random(500ms, 750ms);
     --time2: random(500ms, 750ms);
@@ -274,7 +274,21 @@ button, input{
     --time: 300ms;
     --time2: 250ms;
 }
+.mainArticledescriptionbg{
+    --width:100%;
+    --height:65vh;
+    --time: 300ms;
+    --time2: 250ms;
+}
 .mainArticledescription .divOverflow{
+    font-family: "Livvic", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color:#ffd663;
+    text-align:left;
+}
+.mainArticledescriptionbg .divOverflow{
     font-family: "Livvic", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -362,6 +376,22 @@ button, input{
     width:10%;
     height:100%;
 }
+.numberTag{
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    width:10%;
+    height:100%;
+}
+.numberTagHer{
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    width:20%;
+    height:100%;
+}
 .info{
     display:flex; 
     align-items:flex-start;
@@ -377,6 +407,12 @@ button, input{
     font-weight: 600;
     font-style: normal;
     font-size: 14px;
+}
+.infoTagHer{
+    font-family: "Livvic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size:24px;
 }
 .infoAuthor{
     font-family: "Livvic", sans-serif;
@@ -784,6 +820,49 @@ button, input{
         width: var(--text-width);
     }
 }
+.MyType {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index:5;
+}
+.NotHerTypeProb {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #Fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes NotHerTypeProb {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
 .hr{
     width: 0;
     border: 5px solid rgb(42, 134, 255);
@@ -847,6 +926,78 @@ button, input{
     border-radius:30px;
     background:#65230F;
 }
+.miasma{
+    --width:calc((84vw * 0.02) + 29vw + (20px + ((50vw * 127px) - 226px)) + 3vh);
+    --height:65vh;
+    --time:random(250ms,300ms);
+    --time2:random(250ms,300ms);
+    display:flex;
+    height:65vh;
+    border:0px solid #ffffff00;
+    padding:3vh;
+    border-radius:30px;
+    background:linear-gradient(-45deg, #c49182 0%, #65230F 50%, #65230F 100%);
+}
+.GenSci{
+    --width:84vw;
+    --height:65vh;
+    --time:random(250ms,300ms);
+    --time2:random(250ms,300ms);
+    display:flex;
+    height:65vh;
+    border:0px solid #ffffff00;
+    padding:3vh;
+    border-radius:30px;
+    background:linear-gradient(-45deg, #c49182 0%, #65230F 50%, #65230F 100%);
+}
+.genbio{
+    --width:84vw;
+    --height:90vh;
+    --time:random(250ms,300ms);
+    --time2:random(250ms,300ms);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:65vh;
+    border:0px solid #ffffff00;
+    padding:2vh;
+    border-radius:30px;
+    background:linear-gradient(-45deg, #c49182 0%, #65230F 50%, #65230F 100%);
+}
+.genbio .divOverflow{
+    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.miasmaa{
+    --width:calc((84vw * 0.02) + 29vw + (20px + ((50vw * 127px) - 226px)) + 3vh);
+    --height:45vh;
+    --time:random(250ms,300ms);
+    --time2:random(250ms,300ms);
+    display:flex;
+    background:#e4cfc9;
+    height:65vh;
+    border:0px solid #ffffff00;
+    padding:3vh;
+    border-radius:30px;
+    background:linear-gradient(-45deg, #c49182 0%, #65230F 50%, #65230F 100%);
+}
+.miasmabg{
+    --width:calc((84vw * 0.02) + 29vw + (20px + ((50vw * 127px) - 226px)) + 3vh);
+    --height:85vh;
+    --time:random(250ms,300ms);
+    --time2:random(250ms,300ms);
+    display:flex;
+    background:#e4cfc9;
+    height:65vh;
+    border:0px solid #ffffff00;
+    padding:3vh;
+    border-radius:30px;
+    background:linear-gradient(-45deg, #c49182 0%, #65230F 50%, #65230F 100%);
+}
 .BATMAN{
     --height:calc((50vw*127px)/226px);
     --width:50vw;
@@ -858,6 +1009,15 @@ button, input{
     background-size:cover;
     background-repeat:no-repeat;
     border-radius:30px;
+}
+.Aura{
+    --height:calc((50vw*127px)/226px);
+    --width:calc((50vw*127px)/226px);
+    --time: random(500ms, 750ms);
+    --time2: random(400ms, 500ms);
+    background-image: url("assets/Logo.png");
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 .JOKER{
     --height:calc((50vw*127px)/226px);
@@ -881,6 +1041,23 @@ button, input{
     padding:0px 20px 20px 20px;
     border:0px solid #ffffff00;
     background:#ffffff00;
+}
+.AGH{
+    --width:var(--height);
+    --height:max-content;
+    --time:random(250ms,400ms);
+    --time2:random(250ms,400ms);
+    display:flex;
+    padding:20px;
+    flex-direction:column;
+    align-items:flex-start;
+    box-sizing:border-box;
+    background:linear-gradient(135deg, #65230F 0%, #65230F 50%, #c49182 100%);
+    border-radius:30px;
+}
+.burp{
+    width:2%;
+    height:100%;
 }
 .articleListAP{
     width:70vw;
@@ -924,11 +1101,152 @@ button, input{
     border-radius:20px;
     padding:2vh;
 }
+.AboutMembers{
+    --width: 54vw;
+    color:#ffdb64;
+    background-image:
+        linear-gradient(90deg, #65230F 0%, #65230F 70%, #fcc530 100%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    --height: 20vh;
+    --time: random(300ms, 500ms);
+    --time2: random(300ms, 500ms);
+    box-sizing:border-box;
+    border-radius:20px;
+    padding:2vh;
+    position:absolute;
+    bottom:0;
+    left:0;
+}
+.SoManyThoughts{
+    position:relative;
+    --width: 54vw;
+    border-radius:20px;
+    --height: calc(54vw * 0.3 + 2vh);
+    --time: random(300ms, 500ms);
+    --time2: random(300ms, 500ms);
+}
+.q{
+    background-image:
+        linear-gradient(180deg, #65230F10 0%, #65230F70 40%, #65230F 100%),
+        url("assets/DizonH.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.qq{
+    background-image:
+        linear-gradient(180deg, #65230F10 0%, #65230F70 40%, #65230F 100%),
+        url("assets/MarquezH.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.qqq{
+    background-image:
+        linear-gradient(180deg, #65230F10 0%, #65230F70 40%, #65230F 100%),
+        url("assets/GalvezH.jpg");
+    background-position:bottom;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.qqqq{
+    background-image:
+        linear-gradient(180deg, #65230F10 0%, #65230F70 40%, #65230F 100%),
+        url("assets/ManaliliH.png");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.qqqqq{
+    background-image:
+        linear-gradient(180deg, #65230F10 0%, #65230F70 40%, #65230F 100%),
+        url("assets/MonsaludH.jpeg");
+    background-position:bottom;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.qqqqqq{
+    background-image:
+        linear-gradient(180deg, #65230F10 0%, #65230F70 40%, #65230F 100%),
+        url("assets/BorjaH.jpeg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.s{
+    background-image:
+        url("Dizon.jpg");
+}
+.ss{
+    background-image:
+        url("Marquez.jpg");
+}
+.sss{
+    background-image:
+        url("Galvez.JPG");
+}
+.ssss{
+    background-image:
+        url("Manalili.jpeg");
+}
+.sssss{
+    background-image:
+        url("Monsalud.png");
+}
+.ssssss{
+    background-image:
+        linear-gradient(90deg, #65230F 0%, #65230F80 70%, #65230F20 100%),
+        url("Borja.jpeg");
+}
 .infoAP{
     display:flex; 
     align-items:flex-start;
     flex-direction:column;
     width:50%;
+}
+.infoAPHer{
+    display:flex; 
+    align-items:flex-start;
+    flex-direction:column;
+    width:50%;
+}
+.infoAPHer p{
+    margin:0px;
+    text-align: left;
+}
+.SlowlyEatingMyMind{
+    --height:calc(54vw * 0.3);
+    --time:300ms;
+    --time2:300ms;
+    --width:30%;
+    position:absolute;
+    right:5%;
+    bottom:1vh;
+    z-index:2;
+    border-radius:50%;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.qw{
+    background-image:url("assets/Dizon.png");
+}
+.qww{
+    background-image:url("assets/Marquez.png");
+}
+.qwww{
+    background-image:url("assets/Galvez.png");
+}
+.qwwww{
+    background-image:url("assets/Manalili.png");
+}
+.qwwwww{
+    background-image:url("assets/Monsalud.png");
+}
+.qwwwwww{
+    background-image:url("assets/Borja.png");
 }
 .infoAP p{
     margin:0px;
@@ -936,6 +1254,20 @@ button, input{
 }
 .yearn{
     width:80vw;
+}
+.long{
+    width:calc((84vw * 0.02) + 29vw + (20px + (50vw - 226px)) + 3vh);
+    display:flex;
+    align-items:center;
+    gap:1vw;
+}
+.contagion{
+    --width:50vw;
+    margin:0;
+    --border:3px solid #65230F;
+}
+.contagion.is-visible{
+    flex:1;
 }
 .mainArticleImgFP{
     --height:calc((50vw*127px)/226px);
@@ -1074,6 +1406,15 @@ button, input{
 }
 .mainArticleButtonAddP{
     width:53vw;
+    height:75vh;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    box-sizing:border-box;
+    padding:20px 20px 20px 20px;
+}
+.mainArticleButtonAddP{
+    width:80vw;
     height:75vh;
     display:flex;
     flex-direction:column;
