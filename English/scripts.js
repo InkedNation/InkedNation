@@ -36,56 +36,61 @@ const display = document.getElementById("date");
 display.textContent = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
 //button navigation
+const siteRoot = new URL("../", document.currentScript.src);
+const navigateTo = (path) => {
+    window.location.href = new URL(path, siteRoot).href;
+};
+
 const HomePage = document.getElementById("HomePage");
 HomePage.addEventListener("click", () =>{
-    window.location.href = "../../index.html";
+    navigateTo("index.html");
 });
 const ArticlePage = document.getElementById("ArticlePage");
 ArticlePage.addEventListener("click", () =>{
-    window.location.href = "../../Articles.html";
+    navigateTo("Articles.html");
 });
 const EnglishPage = document.getElementById("EnglishPage");
 EnglishPage.addEventListener("click", () =>{
-    window.location.href = "../../English.html";
+    navigateTo("English.html");
 });
 const FeaturePage = document.getElementById("FeaturePage");
 FeaturePage.addEventListener("click", () =>{
-    window.location.href = "Feature.html";
+    navigateTo("English/Feature.html");
 });
 const EditorialPage = document.getElementById("EditorialPage");
 EditorialPage.addEventListener("click", () =>{
-    window.location.href = "Editorial.html";
+    navigateTo("English/Editorial.html");
 });
 const FilipinoPage = document.getElementById("FilipinoPage");
 FilipinoPage.addEventListener("click", () =>{
-    window.location.href = "../../Filipino.html";
+    navigateTo("Filipino.html");
 });
 const BalitaPage = document.getElementById("BalitaPage");
 BalitaPage.addEventListener("click", () =>{
-    window.location.href = "../Filipino/Balita.html";
+    navigateTo("Filipino/Balita.html");
 });
 const KolumPage = document.getElementById("KolumPage");
 KolumPage.addEventListener("click", () =>{
-    window.location.href = "../Filipino/Kolum.html";
+    navigateTo("Filipino/Kolum.html");
 });
 const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
-    window.location.href = "../../Advocacy.html";
+    navigateTo("Advocacy.html");
 });
 const AboutPage = document.getElementById("AboutPage");
 AboutPage.addEventListener("click", () =>{
-    window.location.href = "../../About.html";
+    navigateTo("About.html");
 });
 //article list randomizer
 const BodyID = document.body.id;
 const EditorialList = [
-    ["Editorial", "A Victim’s Punishment", "Marquez, Justin Bennar DL.", "../English/Editorial/Marquez.html", "../assets/Editorial1.jpeg"],
-    ["Editorial", "How Failing to Protect Students Ruin Their Learning", "Manalili, Mico", "../English/Editorial/Manalili.html", "../assets/Editorial2.jpg"]
+    ["Editorial", "A Victim’s Punishment", "Marquez, Justin Bennar DL.", "English/Editorial/Marquez.html", "assets/Editorial1.jpeg"],
+    ["Editorial", "How Failing to Protect Students Ruin Their Learning", "Manalili, Mico", "English/Editorial/Manalili.html", "assets/Editorial2.jpg"]
 ];
 const FeatureList = [
-    ["Feature", "The Cost of Survival", "Galvez, Nevaeh", "../English/Feature/Galvez.html", "../assets/Feature3.jpeg"],
-    ["Feature", "The Fear Behind the Walls", "Monsalud, Dudz Dale", "../English/Feature/Monsalud.html", "../assets/Feature2.jpg"],
-    ["Feature", "The Invisible Scars", "Dizon, Christian Kyle", "../English/Feature/Dizon.html", "../assets/Feature1.jpg"]
+    ["Feature", "The Cost of Survival", "Galvez, Nevaeh", "English/Feature/Galvez.html", "assets/Feature3.jpeg"],
+    ["Feature", "The Fear Behind the Walls", "Monsalud, Dudz Dale", "English/Feature/Monsalud.html", "assets/Feature2.jpg"],
+    ["Feature", "The Invisible Scars", "Dizon, Christian Kyle", "English/Feature/Dizon.html", "assets/Feature1.jpg"]
 
 ];
 //aghhhhhh im so bored i wanna code something else
@@ -117,10 +122,10 @@ function randomizeFeatureList(){
         const selector = Math.floor(Math.random() * FeatureList.length);
         const selected = FeatureList.splice(selector, 1)[0];
         const IthinkIhaveaCrush = ArticleButtonList[i];
-        const NoChance = new URL(selected[4], document.baseURI);
+        const NoChance = new URL(selected[4], siteRoot);
         IthinkIhaveaCrush.style.setProperty("--article-image", `url("${NoChance}")`);
         IthinkIhaveaCrush.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             IthinkIhaveaCrush.children[0].children[1].children[y].textContent = selected[y];
@@ -133,10 +138,10 @@ function randomizeEditorialList(){
         const selector = Math.floor(Math.random() * EditorialList.length);
         const selected = EditorialList.splice(selector, 1)[0];
         const AGirlASectionTooFar = ArticleButtonList[i];
-        const MedicinalRainbows = new URL(selected[4], document.baseURI);
+        const MedicinalRainbows = new URL(selected[4], siteRoot);
         AGirlASectionTooFar.style.setProperty("--article-image", `url("${MedicinalRainbows}")`);
         AGirlASectionTooFar.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             AGirlASectionTooFar.children[0].children[1].children[y].textContent = selected[y];

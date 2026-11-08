@@ -36,68 +36,73 @@ const display = document.getElementById("date");
 display.textContent = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
 //button navigation
+const siteRoot = new URL(".", document.currentScript.src);
+const navigateTo = (path) => {
+    window.location.href = new URL(path, siteRoot).href;
+};
+
 const HomePage = document.getElementById("HomePage");
 HomePage.addEventListener("click", () =>{
-    window.location.href = "../../index.html";
+    navigateTo("index.html");
 });
 const ArticlePage = document.getElementById("ArticlePage");
 ArticlePage.addEventListener("click", () =>{
-    window.location.href = "../../Articles.html";
+    navigateTo("Articles.html");
 });
 const EnglishPage = document.getElementById("EnglishPage");
 EnglishPage.addEventListener("click", () =>{
-    window.location.href = "../../English.html";
+    navigateTo("English.html");
 });
 const FeaturePage = document.getElementById("FeaturePage");
 FeaturePage.addEventListener("click", () =>{
-    window.location.href = "../English/Feature.html";
+    navigateTo("English/Feature.html");
 });
 const EditorialPage = document.getElementById("EditorialPage");
 EditorialPage.addEventListener("click", () =>{
-    window.location.href = "../English/Editorial.html";
+    navigateTo("English/Editorial.html");
 });
 const FilipinoPage = document.getElementById("FilipinoPage");
 FilipinoPage.addEventListener("click", () =>{
-    window.location.href = "../../Filipino.html";
+    navigateTo("Filipino.html");
 });
 const BalitaPage = document.getElementById("BalitaPage");
 BalitaPage.addEventListener("click", () =>{
-    window.location.href = "../Filipino/Balita.html";
+    navigateTo("Filipino/Balita.html");
 });
 const KolumPage = document.getElementById("KolumPage");
 KolumPage.addEventListener("click", () =>{
-    window.location.href = "../Filipino/Kolum.html";
+    navigateTo("Filipino/Kolum.html");
 });
 const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
-    window.location.href = "../../Advocacy.html";
+    navigateTo("Advocacy.html");
 });
 const AboutPage = document.getElementById("AboutPage");
 AboutPage.addEventListener("click", () =>{
-    window.location.href = "../../About.html";
+    navigateTo("About.html");
 });
 const filipinoMain = document.getElementById("mainArticleFil");
 if (filipinoMain){
 filipinoMain.addEventListener("click", () =>{
-    window.location.href = "Filipino/Kolum/Dizon.html";
+    navigateTo("Filipino/Kolum/Dizon.html");
 });
 }
 const englishMain = document.getElementById("mainArticleEng");
 if (englishMain){
 englishMain.addEventListener("click", () =>{
-    window.location.href = "English/Feature/Dizon.html";
+    navigateTo("English/Feature/Dizon.html");
 });
 }
 const HerThought = document.getElementById("jumpTo");
 if (HerThought){
 HerThought.addEventListener("click", () =>{
-    window.location.href = "Articles.html";
+    navigateTo("Articles.html");
 });
 }
 const ConstantlyInMind = document.getElementById("HerImage");
 if (ConstantlyInMind){
 ConstantlyInMind.addEventListener("click", () =>{
-    window.location.href = "Articles.html";
+    navigateTo("Articles.html");
 });
 }
 //article list randomizer
@@ -166,7 +171,7 @@ function randomizeHomeList(){
         const Beauty = new URL(selected[4], document.baseURI);
         her.style.setProperty("--article-image", `url("${Beauty.href}")`);
         her.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             if(i < 3){
@@ -186,7 +191,7 @@ function randomizeArticleList(){
         const Beauty = new URL(selected[4], document.baseURI);
         SoulMindHeartDecided.style.setProperty("--article-image", `url("${Beauty.href}")`);
         SoulMindHeartDecided.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             SoulMindHeartDecided.children[0].children[1].children[y].textContent = selected[y];
@@ -202,7 +207,7 @@ function randomizeEnglishList(){
         const YetImStillAGambler = new URL(selected[4], document.baseURI);
         NoChance.style.setProperty("--article-image", `url("${YetImStillAGambler.href}")`);
         NoChance.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             NoChance.children[0].children[1].children[y].textContent = selected[y];
@@ -218,7 +223,7 @@ function randomizeFilipinoList(){
         const HisFantasy = new URL(selected[4], document.baseURI);
         HisHeart.style.setProperty("--article-image", `url("${HisFantasy.href}")`);
         HisHeart.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             HisHeart.children[0].children[1].children[y].textContent = selected[y];

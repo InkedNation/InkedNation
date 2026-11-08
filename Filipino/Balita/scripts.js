@@ -36,69 +36,74 @@ const display = document.getElementById("date");
 display.textContent = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
 //button navigation
+const siteRoot = new URL("../../", document.currentScript.src);
+const navigateTo = (path) => {
+    window.location.href = new URL(path, siteRoot).href;
+};
+
 const HomePage = document.getElementById("HomePage");
 HomePage.addEventListener("click", () =>{
-    window.location.href = "../../index.html";
+    navigateTo("index.html");
 });
 const ArticlePage = document.getElementById("ArticlePage");
 ArticlePage.addEventListener("click", () =>{
-    window.location.href = "../../Articles.html";
+    navigateTo("Articles.html");
 });
 const EnglishPage = document.getElementById("EnglishPage");
 EnglishPage.addEventListener("click", () =>{
-    window.location.href = "../../English.html";
+    navigateTo("English.html");
 });
 const FeaturePage = document.getElementById("FeaturePage");
 FeaturePage.addEventListener("click", () =>{
-    window.location.href = "../../English/Feature.html";
+    navigateTo("English/Feature.html");
 });
 const EditorialPage = document.getElementById("EditorialPage");
 EditorialPage.addEventListener("click", () =>{
-    window.location.href = "../../English/Editorial.html";
+    navigateTo("English/Editorial.html");
 });
 const FilipinoPage = document.getElementById("FilipinoPage");
 FilipinoPage.addEventListener("click", () =>{
-    window.location.href = "../../Filipino.html";
+    navigateTo("Filipino.html");
 });
 const BalitaPage = document.getElementById("BalitaPage");
 BalitaPage.addEventListener("click", () =>{
-    window.location.href = "../Balita.html";
+    navigateTo("Filipino/Balita.html");
 });
 const KolumPage = document.getElementById("KolumPage");
 KolumPage.addEventListener("click", () =>{
-    window.location.href = "../Kolum.html";
+    navigateTo("Filipino/Kolum.html");
 });
 const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
-    window.location.href = "../../Advocacy.html";
+    navigateTo("Advocacy.html");
 });
 const AboutPage = document.getElementById("AboutPage");
 AboutPage.addEventListener("click", () =>{
-    window.location.href = "../../About.html";
+    navigateTo("About.html");
 });
 const Jump = document.getElementById("jumpTo");
 Jump.addEventListener("click", () =>{
-    window.location.href = "../../Articles.html";
+    navigateTo("Articles.html");
 });
 //article list randomizer
 const BodyID = document.body.id;
 const Balita1List = [
-    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "../Kolum/Monsalud.html", "../../assets/Kolum2.jpeg"],
-    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "../Kolum/Dizon.html", "../../assets/Kolum1.jpeg"],
-    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "Marquez.html", "../../assets/Balita2.jpg"],
-    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "../Balita/Borja.html", "../../assets/Balita3.jpg"]
+    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "Filipino/Kolum/Monsalud.html", "assets/Kolum2.jpeg"],
+    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "Filipino/Kolum/Dizon.html", "assets/Kolum1.jpeg"],
+    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "Filipino/Balita/Marquez.html", "assets/Balita2.jpg"],
+    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "Filipino/Balita/Borja.html", "assets/Balita3.jpg"]
 ];
 const Balita2List = [
-    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "../Kolum/Monsalud.html", "../../assets/Kolum2.jpeg"],
-    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "../Kolum/Dizon.html", "../../assets/Kolum1.jpeg"],
-    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "Dizon.html", "../../assets/Balita1.jpeg"],
-    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "../Balita/Borja.html", "../../assets/Balita3.jpg"]
+    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "Filipino/Kolum/Monsalud.html", "assets/Kolum2.jpeg"],
+    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "Filipino/Kolum/Dizon.html", "assets/Kolum1.jpeg"],
+    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "Filipino/Balita/Dizon.html", "assets/Balita1.jpeg"],
+    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "Filipino/Balita/Borja.html", "assets/Balita3.jpg"]
 ];
 const Balita3List = [
-    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "../Kolum/Monsalud.html", "../../assets/Kolum2.jpeg"],
-    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "../Kolum/Dizon.html", "../../assets/Kolum1.jpeg"],
-    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "Dizon.html", "../../assets/Balita1.jpeg"],
-    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "Marquez.html", "../../assets/Balita2.jpg"]
+    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "Filipino/Kolum/Monsalud.html", "assets/Kolum2.jpeg"],
+    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "Filipino/Kolum/Dizon.html", "assets/Kolum1.jpeg"],
+    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "Filipino/Balita/Dizon.html", "assets/Balita1.jpeg"],
+    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "Filipino/Balita/Marquez.html", "assets/Balita2.jpg"]
 ];
 //aghhhhhh im so bored i wanna code something else
     //imma code my task app after this to compliment my timer app 
@@ -128,10 +133,10 @@ function randomizeBalita1List(){
         const selector = Math.floor(Math.random() * Balita1List.length);
         const selected = Balita1List.splice(selector, 1)[0];
         const ARG = ArticleButtonList[i];
-        const Woah = new URL(selected[4], document.baseURI);
+        const Woah = new URL(selected[4], siteRoot);
         ARG.style.setProperty("--article-image", `url("${Woah.href}")`);
         ARG.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             ARG.children[0].children[1].children[y].textContent = selected[y];
@@ -144,10 +149,10 @@ function randomizeBalita2List(){
         const selector = Math.floor(Math.random() * Balita2List.length);
         const selected = Balita2List.splice(selector, 1)[0];
         const OneInABillionOdds = ArticleButtonList[i];
-        const OrNoChance = new URL(selected[4], document.baseURI);
+        const OrNoChance = new URL(selected[4], siteRoot);
         OneInABillionOdds.style.setProperty("--article-image", `url("${OrNoChance.href}")`);
         OneInABillionOdds.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             OneInABillionOdds.children[0].children[1].children[y].textContent = selected[y];
@@ -160,10 +165,10 @@ function randomizeBalita3List(){
         const selector = Math.floor(Math.random() * Balita3List.length);
         const selected = Balita3List.splice(selector, 1)[0];
         const OnlyTypeOfGamblingIDontLike = ArticleButtonList[i];
-        const TheHeartAsAChip = new URL(selected[4], document.baseURI);
+        const TheHeartAsAChip = new URL(selected[4], siteRoot);
         OnlyTypeOfGamblingIDontLike.style.setProperty("--article-image", `url("${TheHeartAsAChip.href}")`);
         OnlyTypeOfGamblingIDontLike.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             OnlyTypeOfGamblingIDontLike.children[0].children[1].children[y].textContent = selected[y];

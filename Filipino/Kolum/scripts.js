@@ -36,63 +36,68 @@ const display = document.getElementById("date");
 display.textContent = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
 //button navigation
+const siteRoot = new URL("../../", document.currentScript.src);
+const navigateTo = (path) => {
+    window.location.href = new URL(path, siteRoot).href;
+};
+
 const HomePage = document.getElementById("HomePage");
 HomePage.addEventListener("click", () =>{
-    window.location.href = "../../index.html";
+    navigateTo("index.html");
 });
 const ArticlePage = document.getElementById("ArticlePage");
 ArticlePage.addEventListener("click", () =>{
-    window.location.href = "../../Articles.html";
+    navigateTo("Articles.html");
 });
 const EnglishPage = document.getElementById("EnglishPage");
 EnglishPage.addEventListener("click", () =>{
-    window.location.href = "../../English.html";
+    navigateTo("English.html");
 });
 const FeaturePage = document.getElementById("FeaturePage");
 FeaturePage.addEventListener("click", () =>{
-    window.location.href = "../../English/Feature.html";
+    navigateTo("English/Feature.html");
 });
 const EditorialPage = document.getElementById("EditorialPage");
 EditorialPage.addEventListener("click", () =>{
-    window.location.href = "../../English/Editorial.html";
+    navigateTo("English/Editorial.html");
 });
 const FilipinoPage = document.getElementById("FilipinoPage");
 FilipinoPage.addEventListener("click", () =>{
-    window.location.href = "../../Filipino.html";
+    navigateTo("Filipino.html");
 });
 const BalitaPage = document.getElementById("BalitaPage");
 BalitaPage.addEventListener("click", () =>{
-    window.location.href = "../Balita.html";
+    navigateTo("Filipino/Balita.html");
 });
 const KolumPage = document.getElementById("KolumPage");
 KolumPage.addEventListener("click", () =>{
-    window.location.href = "../Kolum.html";
+    navigateTo("Filipino/Kolum.html");
 });
 const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
-    window.location.href = "../../Advocacy.html";
+    navigateTo("Advocacy.html");
 });
 const Jump = document.getElementById("jumpTo");
 Jump.addEventListener("click", () =>{
-    window.location.href = "../../Articles.html";
+    navigateTo("Articles.html");
 });
 const AboutPage = document.getElementById("AboutPage");
 AboutPage.addEventListener("click", () =>{
-    window.location.href = "../../About.html";
+    navigateTo("About.html");
 });
 //article list randomizer
 const BodyID = document.body.id;
 const Kolum1List = [
-    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "Monsalud.html", "../../assets/Kolum2.jpeg"],
-    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "../Balita/Dizon.html", "../../assets/Balita1.jpeg"],
-    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "../Balita/Marquez.html", "../../assets/Balita2.jpg"],
-    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "../Balita/Borja.html", "../../assets/Balita3.jpg"]
+    ["Kolum", "Kung Saan Dapat Ligtas ang mga Pangarap", "Monsalud, Dudz Dale", "Filipino/Kolum/Monsalud.html", "assets/Kolum2.jpeg"],
+    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "Filipino/Balita/Dizon.html", "assets/Balita1.jpeg"],
+    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "Filipino/Balita/Marquez.html", "assets/Balita2.jpg"],
+    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "Filipino/Balita/Borja.html", "assets/Balita3.jpg"]
 ];
 const Kolum2List = [
-    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "Dizon.html", "../../assets/Kolum1.jpeg"],
-    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "../Balita/Dizon.html", "../../assets/Balita1.jpeg"],
-    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "../Balita/Marquez.html", "../../assets/Balita2.jpg"],
-    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "../Balita/Borja.html", "../../assets/Balita3.jpg"]
+    ["Kolum", "School for Learning or School for Shooting?", "Dizon, Christian Kyle", "Filipino/Kolum/Dizon.html", "assets/Kolum1.jpeg"],
+    ["Balita", "Dalawang mag-aaral, nasawi sa pamamaril sa Ateneo de Zamboanga University", "Dizon, Christian Kyle", "Filipino/Balita/Dizon.html", "assets/Balita1.jpeg"],
+    ["Balita", "DICT, pansamantalang ipinagbawal ang Discord; Reddit, sumailalim sa pagsusuri", "Marquez, Justin Bennar", "Filipino/Balita/Marquez.html", "assets/Balita2.jpg"],
+    ["Balita", "Banta ng Karahasan sa mga Paaralan, Nakakaapekto sa Kalusugang Pangkaisipan ng mga Mag-aaral", "Borja, Candice Ysabelle", "Filipino/Balita/Borja.html", "assets/Balita3.jpg"]
 ];
 //aghhhhhh im so bored i wanna code something else
     //imma code my task app after this to compliment my timer app 
@@ -122,10 +127,10 @@ function randomizeKolum1List(){
         const selector = Math.floor(Math.random() * Kolum1List.length);
         const selected = Kolum1List.splice(selector, 1)[0];
         const DefinitelyOneSided = ArticleButtonList[i];
-        const IDefinitelyHaveACrush = new URL(selected[4], document.baseURI);
+        const IDefinitelyHaveACrush = new URL(selected[4], siteRoot);
         DefinitelyOneSided.style.setProperty("--article-image", `url("${IDefinitelyHaveACrush.href}")`);
         DefinitelyOneSided.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             DefinitelyOneSided.children[0].children[1].children[y].textContent = selected[y];
@@ -138,10 +143,10 @@ function randomizeKolum2List(){
         const selector = Math.floor(Math.random() * Kolum2List.length);
         const selected = Kolum2List.splice(selector, 1)[0];
         const ADreamIllAlwaysHave = ArticleButtonList[i];
-        const ADreamIHadBefore = new URL(selected[4], document.baseURI);
+        const ADreamIHadBefore = new URL(selected[4], siteRoot);
         ADreamIllAlwaysHave.style.setProperty("--article-image", `url("${ADreamIHadBefore.href}")`);
         ADreamIllAlwaysHave.addEventListener("click", () => {
-            window.location.href = selected[3];
+            navigateTo(selected[3]);
         });
         for(let y = 0; y < 3; y++){
             ADreamIllAlwaysHave.children[0].children[1].children[y].textContent = selected[y];
