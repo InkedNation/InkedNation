@@ -76,6 +76,10 @@ const HerThought = document.getElementById("jumpTo");
 HerThought.addEventListener("click", () =>{
     window.location.href = "../../Articles.html";
 });
+const AboutPage = document.getElementById("AboutPage");
+AboutPage.addEventListener("click", () =>{
+    window.location.href = "../../About.html";
+});
 //article list randomizer
 const BodyID = document.body.id;
 const Editorial1List = [
@@ -153,8 +157,8 @@ function randomizeEditorial2List(){
 };
 function randomizeEditorial3List(){
     for(let i = 0; i < 4; i++){
-        const selector = Math.floor(Math.random() * Editorial1List.length);
-        const selected = Editorial1List.splice(selector, 1)[0];
+        const selector = Math.floor(Math.random() * Editorial3List.length);
+        const selected = Editorial3List.splice(selector, 1)[0];
         const button = ArticleButtonList[i];
         const Beauty = new URL(selected[4], document.baseURI);
         button.style.setProperty("--article-image", `url("${Beauty.href}")`);

@@ -72,6 +72,10 @@ const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
     window.location.href = "../../Advocacy.html";
 });
+const AboutPage = document.getElementById("AboutPage");
+AboutPage.addEventListener("click", () =>{
+    window.location.href = "../../About.html";
+});
 const Jump = document.getElementById("jumpTo");
 Jump.addEventListener("click", () =>{
     window.location.href = "../../Articles.html";

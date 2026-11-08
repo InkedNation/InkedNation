@@ -76,6 +76,10 @@ const Jump = document.getElementById("jumpTo");
 Jump.addEventListener("click", () =>{
     window.location.href = "../../Articles.html";
 });
+const AboutPage = document.getElementById("AboutPage");
+AboutPage.addEventListener("click", () =>{
+    window.location.href = "../../About.html";
+});
 //article list randomizer
 const BodyID = document.body.id;
 const Kolum1List = [

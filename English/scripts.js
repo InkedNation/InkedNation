@@ -72,6 +72,10 @@ const AdvocacyPage = document.getElementById("AdvocacyPage");
 AdvocacyPage.addEventListener("click", () =>{
     window.location.href = "../../Advocacy.html";
 });
+const AboutPage = document.getElementById("AboutPage");
+AboutPage.addEventListener("click", () =>{
+    window.location.href = "../../About.html";
+});
 //article list randomizer
 const BodyID = document.body.id;
 const EditorialList = [
