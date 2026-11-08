@@ -770,31 +770,6 @@ button, input{
         opacity var(--time) ease-in-out var(--time),
         visibility 0s linear calc(var(--time) * 2);
 }
-.cursor.is-visible::after{
-    height:calc(var(--height) + 10px);
-    width:calc(var(--width) + 10px);
-    opacity:0;
-    visibility:hidden;
-}
-.cursor::after{
-    content:'';
-    position:absolute;
-    top:-5px;
-    left:-5px;
-    width:20px;
-    height:20px;
-    z-index: 1;
-    background:
-        url("assets/Corner.png") left top / 10px 10px no-repeat,
-        url("assets/Corner.png") right top / 10px 10px no-repeat,
-        url("assets/Corner.png") left bottom / 10px 10px no-repeat,
-        url("assets/Corner.png") right bottom / 10px 10px no-repeat;
-    transition: 
-        width var(--time2) ease-in-out,
-        height var(--time) ease-in-out,
-        opacity var(--time) ease-in-out var(--time),
-        visibility 0s linear calc(var(--time) * 2);
-}
 .text{
     --steps:11;
     overflow:hidden;
