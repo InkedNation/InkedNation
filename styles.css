@@ -970,7 +970,7 @@ button, input{
     --time2:random(250ms,300ms);
     display:flex;
     background:#e4cfc9;
-    height:65vh;
+    height:70vh;
     border:0px solid #ffffff00;
     padding:3vh;
     border-radius:30px;
