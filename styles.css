@@ -457,6 +457,9 @@ button, input{
 .plato{
     --height:65vh;
 }
+.TwoMindedTwoSighted{
+    --height:95vh;
+}
 .sourceContainer .divOverflow {
     flex-direction: column;
     justify-content: center;
