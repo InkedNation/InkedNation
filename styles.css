@@ -1,5 +1,6 @@
 body{
     margin:0px;
+    width:100vw;
     overflow-x: hidden;
     background:linear-gradient(-45deg, #c49182 0%, #FAF5EB 50%, #FAF5EB 100%);
 }
